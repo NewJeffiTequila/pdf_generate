@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    <table>
+        <thead>
+            <th style="width: 5%; border: 1pt solid windowtext; background: rgb(231, 230, 230); padding: 0cm 5.4pt;">
+                <p class="MsoNormal" align="center" style="margin: 0cm; text-align: center; line-height: normal;">
+                    <b><span>ITEM</span></b>
+                </p>
+            </th>
+            <th style="width: 40%;">
+                <p class="MsoNormal" align="center" style="margin: 0cm; text-align: center; line-height: normal;">
+                    <b><span>DESCRIÇÃO</span></b>
+            </th>
+            <th style="width: 15%;">
+                <p class="MsoNormal" align="center" style="margin: 0cm; text-align: center; line-height: normal;">
+                    <b><span>MARCA</span></b>
+            </th>
+            <th style="width: 10%; ">
+                <p class="MsoNormal" align="center" style="margin: 0cm; text-align: center; line-height: normal;">
+                    <b><span>UNIDADE</span></b>
+            </th>
+            <th style="width: 10%; ">
+                <p class="MsoNormal" align="center" style="margin: 0cm; text-align: center; line-height: normal;">
+                    <b><span>QUANTIDADE</span></b>
+            </th>
+            <th style="width: 10%;">
+                <p class="MsoNormal" align="center" style="margin: 0cm; text-align: center; line-height: normal;">
+                    <b><span>PREÇO UNID.</span></b>
+            </th>
+            <th style="width: 10%;">
+                <p class="MsoNormal" align="center" style="margin: 0cm; text-align: center; line-height: normal;">
+                    <b><span>PREÇO TOTAL</span></b>
+            </th>
+        </thead>
+        <% for(var i=0; i < data.length; i++) { %>
+           <tr>
+            <td style="border-right: 1pt solid windowtext; border-bottom: 1pt solid windowtext; border-left: 1pt solid windowtext; border-image: initial; border-top: none; padding: 0cm 5.4pt;" >
+                <%= data[i].id %>
+            </td>
+             <td>
+                <%= data[i].descricao %>
+            </td>
+            <td >
+               -
+            </td>
+            <td>
+                <%= data[i].unidade %>
+            </td>
+            <td>
+                <%= data[i].quantidade %>
+            </td>
+            <td >
+                <%= data[i].preco_unidade %>
+            </td>
+            <td>
+                <b><span><%= data[i].preco_total %></span></b>
+            </td>
+           </tr>
+        <% } %>
+    </table>
+</body>
+<style>
+    td{
+        border-top: none; 
+        border-left: none; 
+        border-bottom: 1pt solid ; 
+        border-right: 1pt solid ; 
+        padding: 0cm 5.4pt;
+    }
+    th{
+        border-top: 1pt solid ; 
+        border-right: 1pt solid ;
+        border-bottom: 1pt solid ; 
+        border-image: initial; 
+        border-left: none; 
+        background: rgb(231, 230, 230); 
+        padding: 0cm 5.4pt;
+    }
+</style>
+</html>
